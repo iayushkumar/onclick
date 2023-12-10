@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-indigo-400">
+
+    <div class="flex justify-center m-8">
+        <textarea id="a" class="bg-blue-100 text-blue-900 p-4 m-2 w-1/4" rows="4" placeholder="Enter a number"></textarea>
+    </div>
+
+    <div class="flex justify-center m-2">
+        <button class="bg-blue-500 text-white p-4 m-2 w-1/4" type="button" onclick="myFunction()">+(onclick)</button>
+        <button class="bg-blue-500 text-white p-4 m-2 w-1/4" type="button" onmouseover="myFunction1()">-(onmouseover)</button>
+        <button class="bg-blue-500 text-white p-4 m-2 w-1/4" type="button" onmouseover="myFunction2()">%(onmouseover)</button>
+        <button class="bg-blue-500 text-white p-4 m-2 w-1/4" type="button" onfocus="myFunction3()">/(onfocus)</button>
+        <button class="bg-blue-500 text-white p-4 m-2 w-1/4" type="button" onfocus="myFunction4()">*(onfocus)</button>
+    </div>
+
+    <div class="flex justify-center m-8">
+        <textarea id="b" class="bg-blue-100 text-blue-900 p-4 m-2 w-1/4" rows="4" placeholder="Result" readonly></textarea>
+    </div>
+
+    <script>
+     const myFunction = () => {
+       const c = parseInt(document.getElementById('a').value);
+       const d = parseInt(document.getElementById('b').value);
+
+       if(isNaN(d))
+       {
+        let result=c;
+        document.getElementById('b').value = result;
+       }
+
+       else
+       {
+        const result = d + c;
+        document.getElementById('b').value = result;
+       }
+     }
+
+    const myFunction1 = () => {
+        const c = parseInt(document.getElementById('a').value);
+        const d = parseInt(document.getElementById('b').value);
+
+        if(isNaN(d))
+       {
+        let result=c;
+        document.getElementById('b').value = result;
+       }
+
+       else
+       {
+        const result = d - c;
+        document.getElementById('b').value = result;
+       }
+    }
+
+    const myFunction2 = () => {
+        const c = parseInt(document.getElementById('a').value);
+        const d = parseInt(document.getElementById('b').value);
+
+        if(isNaN(d))
+       {
+        let result=c;
+        document.getElementById('b').value = result;
+       }
+
+       else
+       {
+        const result = d % c;
+        document.getElementById('b').value = result;
+       }
+    }
+
+    const myFunction3 = () => {
+        const c = parseInt(document.getElementById('a').value);
+        const d = parseInt(document.getElementById('b').value);
+
+        if(isNaN(d))
+       {
+        let result=c;
+        document.getElementById('b').value = result;
+       }
+
+       else
+       {
+        const result = d / c;
+        document.getElementById('b').value = result;
+       }
+    }
+
+    const myFunction4 = () => {
+        const c = parseInt(document.getElementById('a').value);
+        const d = parseInt(document.getElementById('b').value);
+
+        if(isNaN(d))
+       {
+        let result=c;
+        document.getElementById('b').value = result;
+       }
+
+       else
+       {
+        const result = d * c;
+        document.getElementById('b').value = result;
+       }
+    }
+    </script>
+    
+</body>
+</html>
